@@ -1,0 +1,110 @@
+/* สไตล์ของแถบนำทางด้านข้าง */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+
+
+/* ลิงก์ในแถบนำทาง */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* ลิงก์ที่เลือกอยู่ปัจจุบัน */
+.sidebar a.active {
+    background-color: #00229f;
+    color: white;
+}
+
+/* ลิงก์เมื่อเมาส์ไปชี้ */
+.sidebar a:hover:not(.active) {
+    background-color: #00229f;
+    color: rgb(225, 255, 2);
+   
+}
+
+/* ส่วนเนื้อหาของเว็บไซต์ */
+.content {
+    margin-left: 500px;
+    padding: 1px 18px;
+    height: 1000px;
+}
+
+/* เมื่อหน้าจอมีความกว้างน้อยกว่า 700px ให้แสดงแถบด้านข้างเป็นแถบด้านบน */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* เมื่อหน้าจอมีความกว้างน้อยกว่า 400px ให้แสดงแถบด้านข้างในลักษณะแนวตั้ง */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+
+#login-button {
+    position: fixed;
+    top: 35%;
+    right: 4%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* .button-container {
+    position: relative;
+}
+.login-button {
+    position: absolute;
+    top: 50%;
+    right:  3%;
+    transform: translateY(-50%);
+} */
+
+/* .button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container {
+    display: grid;
+    justify-content: end;
+} */
+
